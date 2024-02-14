@@ -39,9 +39,10 @@ function render() {
     </div>`
         }
 
-        taskBoard.innerHTML = resultHtml;
+        // taskBoard.innerHTML = resultHtml;
         // console.log(resultHtml);
     }
+    taskBoard.innerHTML = resultHtml;
 }
 
 function togleComplete(id) {

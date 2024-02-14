@@ -29,9 +29,17 @@ body{
     top: 52px;
     padding: 0px;
 }
-
+.btnNone{
+    background: none;
+    border: none;
+}
 .task{
     display: flex;
     justify-content: space-between;
     padding: 1em;
+}
+.taskDone{
+    text-decoration: line-through;
+    background: #eeeeee;
+    width: 90%;
 }

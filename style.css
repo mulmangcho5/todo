@@ -3,13 +3,19 @@ body{
     background: url(background.avif);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Nunito', sans-serif;
 }
 .container{
     background: #fff;
     min-height: 100vh;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
+    padding: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 .taskAria{
+    margin-top: 1rem;
     border: 1px solid lightgrey ;
 }
 .taskTabs{
@@ -19,6 +25,7 @@ body{
 }
 .taskTabs div {
     padding: 1em;
+    border-radius: 4px;
 }
 #underLine{
     width: 80px;
@@ -27,11 +34,14 @@ body{
     position: absolute;
     left: 0px;
     top: 52px;
+    bottom: -1px;
     padding: 0px;
+    transition: all 0.2s ease-in-out;
 }
 .btnNone{
     background: none;
     border: none;
+    transition: transform 0.1s ease;
 }
 .task{
     display: flex;
@@ -41,5 +51,9 @@ body{
 .taskDone{
     text-decoration: line-through;
     background: #eeeeee;
-    width: 90%;
+    padding: 5px;
+    width: 85%;
+}
+.taskTabs div{
+    cursor: pointer;
 }

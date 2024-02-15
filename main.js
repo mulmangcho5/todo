@@ -7,11 +7,11 @@ let taskBoard = document.querySelector("#taskBoard");
 let mode = "all";
 
 
-addBtn.addEventListener("click", handleTaskAddition);
+addBtn.addEventListener("click", addTask);
 
 taskInput.addEventListener("keypress", function(event) {
     if (event.key === 'Enter') { 
-        handleTaskAddition();
+        addTask();
         event.preventDefault(); 
     }
 });
@@ -23,6 +23,7 @@ for (let i = 1; i < tabs.length; i++) {
 
 function addTask() {
     if (taskInput.value.trim() === '') {
+        alert("입력해주세요.");
         return;
     }
 
@@ -132,11 +133,4 @@ function moveUnderline(tab) {
 moveUnderline(tabs[0]);
 
 
-function handleTaskAddition() {
-    if (taskInput.value.trim() === '') {
 
-        alert("입력해주세요.");
-    } else {
-        addTask();
-    }
-}
